@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="wrapper">
+        <h1 id= "Main_heading"><b>High Voltages MQTT DashBoard</b></h1><br></br>
+        <form id="connection-information-form">
+            <b>Hostname or IP address and Port Number</b>
+            <input type="text" id="host" name="host" placeholder="Broker address or IP address" value="">
+            <input type="text" id="port" name="port" placeholder="1883" value="">
+            <input type="text" id="client_id" name="client_id" placeholder="Client ID" value="">
+
+            <b>Username and Password</b>
+            <input type="text" id="username" name="username" placeholder="Username" value="">
+            <input type="text" id="password" name="password" placeholder="Password" value="">
+
+            <b>Subscription Topic</b>
+            <input type="text" id="topic_s" name="topic_s" placeholder="Subscription Topic" value="">
+            <div>
+                <button type="button" onclick = "startConnect()" value="Connect">Connect</button>
+                <button type="button" onclick = "startDisconnect()" value="Disconnect">Disconnect</button>
+            </div>
+
+            <b>Publish Topic</b>
+            <input type="text" id="topic_p" name="topic_p" placeholder="Publish Topic" value="">
+            <input type="text" id="message" name="message" placeholder="Message" value="">
+            <input Type="button" onclick ="publishMessage()" value="Publish">
+        </form>
+        <div id="messages"></div>
+    </div>
+
+    <script src = "https://unpkg.com/mqtt/dist/mqtt.min.js"></script>
+    <script src = "script.js"></script>
+</body>
+</html>
