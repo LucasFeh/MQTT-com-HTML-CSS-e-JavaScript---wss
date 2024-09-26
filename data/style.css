@@ -10,6 +10,7 @@ body{
     display: flex;
     align-items: center;
     background-color: rgb(58, 55, 55);
+    color: white;
 }
 
 .wrapper{
@@ -19,7 +20,8 @@ body{
   min-height: 100%;
   padding-right: 10px;
   padding-left: 10px;
-  background-color: white;
+  background-color: rgb(76, 194, 101);
+  border: 5px solid rgb(100, 94, 94);
 }
 #connection-information-form{
     display: flex;
@@ -47,7 +49,7 @@ input[type=password]{
     margin: 4px 2px;
 }
 input[type=text]:focus{
-    background-color: #ddc9c9;
+    background-color: #b3eb85;
 }
 input[type=button]:hover{
     background-color: #45a049;
@@ -66,7 +68,7 @@ button{
    padding: 12px;
    width: 100%;
    display: inline-block;
-   border: 1px solid black;
+   border: 1px solid rgb(255, 255, 255);
    max-height: 250px;
    min-height: 250px;
    overflow: scroll; 
@@ -74,4 +76,22 @@ button{
 #messages span{
     overflow-y: scroll;
     overflow: scroll;
+}
+::-webkit-scrollbar {
+    width: 10px;
+    border-radius: 10px;
+    color: rgb(8, 245, 59);
+}
+
+::-webkit-scrollbar-track {
+    background-color: rgb(0, 0, 0);
+}
+
+::-webkit-scrollbar-thumb { 
+    background-color: #10c719;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #24df2d;
 }

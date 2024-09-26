@@ -7,10 +7,10 @@
 // #define DHTTYPE DHT11 // Define o tipo de sensor DHT11
 // #define DHTPIN 4 
 // DHT dht(DHTPIN, DHTTYPE); // Cria um objeto DHT
-// #define LED_BUILTIN 2
+#define LED_BUILTIN 2
 #define LEDvermelho 23
 #define LEDverde 19
-#define LEDamarelo 18
+#define LEDamarelo 26
 
 const char* ssid = "DiEletrons_Reuniao";
 const char* password = "49433012";
@@ -97,7 +97,8 @@ void reconnect(){
 
  if(client.connect(clientId.c_str())){
       Serial.println("Conectado");
-       client.subscribe("LED");
+      digitalWrite(LED_BUILTIN, HIGH);
+      client.subscribe("LED");
     }else{
       Serial.print("Falha, rc=");
       Serial.print(client.state());
@@ -134,6 +135,7 @@ void loop(){
     reconnect();
   }
   client.loop();
+
 
     // digitalWrite(LED_BUILTIN, !digitalRead(LED_BUILTIN)); // Alterna o estado do LED
 
